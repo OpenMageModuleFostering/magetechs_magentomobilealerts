@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @package     MageTechs Magento Mobile Alerts
+ * @author      MageTechs <support@MageTechs.com>
+ * @copyright   Copyright (c) 2012 (http://www.MageTechs.com)
+ */
+ -->
+<config>
+<default>
+        <log>
+            <visitor>
+                <online_update_frequency>5</online_update_frequency>
+            </visitor>
+        </log>
+</default>
+    <modules>
+        <MageTechs_MagentoMobileAlerts>
+            <version>1.0.1</version>
+        </MageTechs_MagentoMobileAlerts>
+    </modules>
+    <global>
+        <models>
+            <MagentoMobileAlerts>
+                <class>MageTechs_MagentoMobileAlerts_Model</class>
+            </MagentoMobileAlerts>
+        </models>
+    </global>
+</config>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @package     MageTechs Magento Mobile Alerts
+ * @author      MageTechs <support@MageTechs.com>
+ * @copyright   Copyright (c) 2012 (http://www.MageTechs.com)
+ */
+ -->
+<definitions xmlns:typens="urn:{{var wsdl.name}}" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns="http://schemas.xmlsoap.org/wsdl/"
+		name="{{var wsdl.name}}" targetNamespace="urn:{{var wsdl.name}}">
+	<types>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Magento">
+			<import namespace="http://schemas.xmlsoap.org/soap/encoding/"
+					schemaLocation="http://schemas.xmlsoap.org/soap/encoding/"/>
+			<complexType name="getVisitorsEntity">
+				<all>
+					<element name="url_id" type="typens:associativeArray" minOccurs="0"/>				
+				</all> 
+			</complexType>
+		</schema>
+	</types>
+	<message name="magentoMobileAlertsGetVisitorsRequest">
+		<part name="sessionId" type="xsd:string" />
+	</message>
+	<message name="magentoMobileAlertsGetVisitorsResponse">
+		<part name="data" type="xsd:ArrayOfString"/>
+	</message>
+	<message name="magentoMobileAlertsGetRecentSalesRequest">
+		<part name="sessionId" type="xsd:string" />
+	</message>
+	<message name="magentoMobileAlertsGetRecentSalesResponse">
+		<part name="data" type="xsd:ArrayOfString"/>
+	</message>
+	<portType name="{{var wsdl.handler}}PortType">
+		<operation name="magentoMobileAlertsGetVisitors">
+			<documentation>Get Visitors Infomation</documentation>
+			<input message="typens:magentoMobileAlertsGetVisitorsRequest" />
+			<output message="typens:magentoMobileAlertsGetVisitorsResponse" />
+		</operation>
+		<operation name="magentoMobileAlertsGetRecentSales">
+			<documentation>Get Recent Sales Information</documentation>
+			<input message="typens:magentoMobileAlertsGetRecentSalesRequest" />
+			<output message="typens:magentoMobileAlertsGetRecentSalesResponse" />
+		</operation>
+	</portType>
+	<binding name="{{var wsdl.handler}}Binding" type="typens:{{var wsdl.handler}}PortType">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="magentoMobileAlertsGetVisitors">
+			<soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+			<input>
+				<soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+			<operation name="magentoMobileAlertsGetRecentSales">
+			<soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+			<input>
+				<soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+	</binding>
+	<service name="{{var wsdl.name}}Service">
+		<port name="{{var wsdl.handler}}Port" binding="typens:{{var wsdl.handler}}Binding">
+			<soap:address location="{{var wsdl.url}}" />
+		</port>
+	</service>
+</definitions>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>MageTechs_MagentoMobileAlerts</name>
+    <version>1.0.1</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Get real time alerts on your mobile phone.</summary>
+    <description>Sends distinctive alerts and details to your phone when a new visitor arrives at your store and when they make a purchase. </description>
+    <notes>Initial Public Release v1.0.1&#xD;
+Supports Magento v1.5 and higher&#xD;
+Supports Android 2.2 and higher</notes>
+    <authors><author><name>James Jacob</name><user>MageTechs</user><email>magetechs@gmail.com</email></author></authors>
+    <date>2012-09-03</date>
+    <time>07:07:30</time>
+    <contents><target name="magecommunity"><dir name="MageTechs"><dir name="MagentoMobileAlerts"><dir name="Model"><dir name="Api"><file name="V2.php" hash="a6fe8f90c1f909d73ad284910f09f8d3"/></dir><file name="Api.php" hash="2e55a77a5c0ac1108941853a602990b9"/></dir><dir name="etc"><file name="api.xml" hash="dca75ef2ab5927f2a7b44e27610e042b"/><file name="config.xml" hash="71d42c48401c9e55da60009883c64825"/><file name="wsdl.xml" hash="8149934168281c0f12ef9a10361c7b71"/></dir></dir></dir></target><target name="magelocal"><dir name="modules"><dir name="MageTechs"><file name="MagentoMobileAlerts.xml" hash=""/></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

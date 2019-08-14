@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @package     MageTechs Magento Mobile Alerts
+ * @author      MageTechs <support@MageTechs.com>
+ * @copyright   Copyright (c) 2012 (http://www.MageTechs.com)
+ */
+ -->
+<config>
+    <api>
+        <resources>
+            <magentoMobileAlerts translate="title" module="magetechs_magentomobilealerts">
+            <title>Magento Mobile Alerts</title>
+            <model>MagentoMobileAlerts/api</model>
+            <methods>
+				<getVisitors translate="title" module="magetechs_magentomobilealerts">
+                    <title>Gets online visitors</title>
+                    <method>getVisitors</method>
+                </getVisitors>
+            </methods>
+            <methods>
+				<getRecentSales translate="title" module="magetechs_magentomobilealerts">
+                    <title>Gets Recent Sales </title>
+                    <method>getRecentSales</method>
+                </getRecentSales>
+            </methods>
+            </magentoMobileAlerts>
+        </resources>
+        <resources_alias>
+            <resourcename>magentoMobileAlerts</resourcename>
+        </resources_alias>
+        <v2>
+            <resources_function_prefix>
+                <resourcename>magentoMobileAlerts</resourcename>
+            </resources_function_prefix>
+        </v2>
+    </api>
+</config>

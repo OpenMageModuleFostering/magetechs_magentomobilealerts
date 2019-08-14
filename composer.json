@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/MageTechs_MagentoMobileAlerts",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "Get real time alerts on your mobile phone.",
+    "authors": [
+    {
+        "name": "James Jacob",
+        "email": "magetechs@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
